@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ******header******* */
+
+.header-container{
+    height: 5.2rem;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-container>*{
+    border-radius: 6px;
+    height: 65%;
+    background-color: rgb(155, 150, 150);
+}
+
+.color_palette_container{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.color{
+    height: 50%;
+    width: 12%;
+    border-radius: 3px;
+}
+.lightPink{
+    background-color: lightpink;
+}
+.lightBlue{
+    background-color: lightskyblue;
+}
+.lightGreen{
+    background-color: lightgreen;
+}
+.black{
+    background-color: black;
+}
+.add_del_container, .lock_unlock_container{
+    width: 20%;
+    display: flex
+}
+
+.add_del_container>*, .lock_unlock_container>*{
+    width: 50%;
+    height: 100%
+}
+
+.add_container, .del_container, .lock_container, .unlock_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fas{
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+#task_input{
+    color: white;
+}
+
+.active{
+    background-color: rgb(90, 87, 87);
+}
+
+/* ******main******** */
+
+.main-container{
+    height: calc(100vh - 5.2rem);
+    background-color: #f2f2f2;
+    padding: 10rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    overflow-y: scroll;
+}
+
+.task_container{
+    height: 8rem;
+    width: 15rem;
+    background-color: white;
+    margin: 1rem 0rem;
+}
+
+.task_main_container{
+    height: 6.5rem;
+}
+
+.task_header{
+    height: 0.7rem;
+    /* background-color: black; */
+}
+
+.task_id{
+    color: rgb(158, 157, 157);
+    margin: 0.5rem;
+}
+.task_text{
+    padding: .5rem;
+    height: 80%;
+    overflow-y: scroll;
+}
+.task_text::-webkit-scrollbar {
+    display: none;
+  }
+/* **************modal*************** */
+
+.modal{
+    height: 18rem;
+    width: 30rem;
+    border: 1px solid black;
+    display: flex;
+    background-color: white;
+
+    position: fixed;
+    top: calc(50% - 9rem);
+    left: calc(50% - 15rem);
+
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.modal_main_container{
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 70%;
+}
+
+.inputTask{
+    padding: 1rem;
+    height: 100%;
+}
+
+.inputTask textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 2rem;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.modal_color_container{
+    /* border: 1px solid green; */
+    /* height: 10rem; */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(92, 90, 90);
+}
+
+.Color{
+    height: 15%;
+    width: 40%;
+    border-radius: 3px;
+}
+
+.selected{
+    border: .15rem solid rgb(255, 240, 36);
+}
+
+@media only screen and (max-width: 600px) {
+    html { font-size: 10px; } 
+}
